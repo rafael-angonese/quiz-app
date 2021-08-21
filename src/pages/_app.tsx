@@ -4,6 +4,8 @@ import type { AppProps } from "next/app";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
+import { QuestionContextProvider } from "../contexts/QuestionsContext";
+
 import theme from "../styles/theme";
 import "../styles/globals.css";
 
@@ -27,9 +29,11 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <div style={{ margin: 60 }}>
-          <Component {...pageProps} />
-        </div>
+        <QuestionContextProvider>
+          <div style={{ margin: 60 }}>
+            <Component {...pageProps} />
+          </div>
+        </QuestionContextProvider>
       </ThemeProvider>
     </React.Fragment>
   );
