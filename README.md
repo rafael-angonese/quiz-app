@@ -1,34 +1,78 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 👁️‍🗨️ **Preview**
 
-## Getting Started
+<img alt="index" src=".github/index.png" />
+<img alt="quiz" src=".github/quiz.png" />
+<img alt="score" src=".github/score.png" />
 
-First, run the development server:
+---
+
+## 💅🏻 **Acesse o Quiz**
+
+Você pode acessar a aplicação através [desse link](https://quiz-app-hba6dsi78-rafael-angonese.vercel.app/).
+
+---
+
+## 📄 **Descrição**
+
+- Imagine que você foi contratado para desenvolver uma aplicação WEB para responder questionários de perguntas sobre conhecimentos gerais. Ao acessar a página, o usuário deve escolher a quantidade de perguntas que deseja responder. Após escolher, deve aparecer uma página com dois botões, “Start” e “Cancel”. Ao selecionar “Cancel”, deve retornar para escolher a quantidade. Ao selecionar “Start” deve fazer requisição na URL disponibilizada, pegar as perguntas e a cada pergunta, deve exibir as respostas. O usuário deve escolher uma resposta e a cada resposta deve contabilizar quantidade de acertos e erros. Ao final, deve vir um relatório com a quantidade de acertos e erros e uma lista de cada questão e qual foi certo e qual foi errado. Nessa lista também deve aparecer a resposta escolhida e a resposta correta. A pontuação deve ser guardada em no localStorage. Na primeira página e se houver um questionário salvo no localStorage, deve ter a possibilidade de rever o relatório.
+
+- Requisitos não funcionais:
+- É obrigatório a utilização do framework React, Material UI e usar a URL para gerar as questões através do link: https://opentdb.com/api.php?amount=QUANTIDADE.
+
+- Além disso, usar o LocalStorage para armazenar, git para realizar a versão e github para armazenar o projeto.
+
+- Requisitos não obrigatórios
+
+- Você será bem avaliado se usar Context API, Axios, Hooks, Formik, testes de comportamento e se você realizar um deploy em algum link. Além disso, vamos dar uma atenção maior quando demonstrar uma boa apresentação de design e uso de design patterns (como services, repositories, factories, builders e etc)
+
+---
+
+## 🧪 **Tecnologias**
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [MaterialUI](https://material-ui.com/)
+- [Formik](https://formik.org/)
+- [Axios](https://github.com/axios/axios)
+
+---
+
+## 🎮 **Ambiente de desenvolvimento**
 
 ```bash
-npm run dev
-# or
-yarn dev
+node --version
+v16.0.0
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## **🚀 Como executar**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+# Clone este repositório.
+$ git clone https://github.com/rafael-angonese/quiz-app
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+# Vá para a pasta quiz-app
+$ cd quiz-app
 
-## Learn More
+# Instale as dependências
+$ npm install
 
-To learn more about Next.js, take a look at the following resources:
+# Execute a aplicação
+$ npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- O app estará rodando na porta 3000 no seu browser.
+- Acesse [`<http://localhost:3000>`](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ⚖️ **Licença**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+---
+
+Feito com 💜 by Rafael Angonese
