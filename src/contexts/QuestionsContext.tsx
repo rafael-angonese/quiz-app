@@ -30,7 +30,7 @@ export function QuestionContextProvider(
           localStorage.getItem("questions") || "[]"
         );
 
-        setQuestions(storagedQuestions.questions);
+        setQuestions(storagedQuestions);
       } catch (e) {
         console.log(e);
       }
