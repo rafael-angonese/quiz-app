@@ -28,11 +28,11 @@ const Quiz: NextPage = () => {
   const [questions, setQuestions] = useState<IQuestions[]>([]);
 
   async function handleSubmit(
-    data: { questions: IQuestions[] },
+    data: IQuestions[],
     actions: FormikHelpers<any>
   ): Promise<void> {
     try {
-      addQuestions(data.questions);
+      addQuestions(data);
       actions.setSubmitting(false);
       router.push("/score");
     } catch (error) {
@@ -85,7 +85,10 @@ const Quiz: NextPage = () => {
               initialValues={{
                 questions: questions,
               }}
-              onSubmit={(values, actions) => handleSubmit(values, actions)}
+              onSubmit={(values, actions) => {
+                const { questions } = values;
+                handleSubmit(questions, actions);
+              }}
             >
               {questions.map((item, index) => {
                 return (
