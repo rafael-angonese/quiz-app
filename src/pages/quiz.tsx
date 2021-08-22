@@ -48,7 +48,7 @@ const Quiz: NextPage = () => {
 
         const { results } = response.data;
 
-        const newQuestions = results.map((item) => {
+        const newQuestions = results.map((item: IQuestions) => {
           let answers = item.incorrect_answers.concat(item.correct_answer);
           answers = answers.sort(() => Math.random() - 0.5);
           return {
