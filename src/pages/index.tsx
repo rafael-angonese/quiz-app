@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Link from "next/link";
+import { useRouter } from "next/router";
 
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
@@ -10,6 +10,7 @@ import Typography from "@material-ui/core/Typography";
 import { useQuestionsContext } from "../hooks/useQuestions";
 
 const Home: NextPage = () => {
+  const router = useRouter();
   const { quantityQuestions, setQuantityQuestions } = useQuestionsContext();
 
   return (
@@ -38,16 +39,15 @@ const Home: NextPage = () => {
       <Box textAlign="center" p={5}>
         <Grid container justifyContent="center">
           <Grid item xs={12} sm={6} md={3} lg={3} xl={3}>
-            <Link href="/quiz">
-              <Button
-                fullWidth
-                variant="contained"
-                color="primary"
-                size="large"
-              >
-                Start
-              </Button>
-            </Link>
+            <Button
+              fullWidth
+              variant="contained"
+              color="primary"
+              size="large"
+              onClick={() => router.push("/quiz")}
+            >
+              Start
+            </Button>
           </Grid>
         </Grid>
       </Box>
