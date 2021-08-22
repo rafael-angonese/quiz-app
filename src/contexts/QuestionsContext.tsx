@@ -24,18 +24,18 @@ export function QuestionContextProvider(
   const [questions, setQuestions] = useState<IQuestions[]>([]);
 
   useEffect(() => {
-    async function getStoragedPokemons() {
+    async function getStoragedQuestions() {
       try {
-        const storagedPokemons = await JSON.parse(
+        const storagedQuestions = await JSON.parse(
           localStorage.getItem("questions") || "[]"
         );
 
-        setQuestions(storagedPokemons);
+        setQuestions(storagedQuestions.questions);
       } catch (e) {
         console.log(e);
       }
     }
-    getStoragedPokemons();
+    getStoragedQuestions();
   }, []);
 
   const addQuestions = async (questions: IQuestions[]) => {
